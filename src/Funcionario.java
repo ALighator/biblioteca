@@ -44,4 +44,14 @@ public class Funcionario {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario:" +
+                "nome='" + nome + '\'' +
+                ", cpf=" + cpf +
+                ", cargo='" + cargo + '\'' +
+                ", salario='" + salario + '\'' +
+                ", endereco=" + endereco;
+    }
 }

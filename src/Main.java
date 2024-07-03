@@ -22,20 +22,22 @@ public class Main {
                 System.out.println("Cadastro de funcionário\n"
                         +"nome:");
                 locacao.getFuncionario().setNome(scanner.next());
+                
                 System.out.println("Digite seu CPF:");
                 locacao.getFuncionario().setCpf(scanner.nextLong());
 
 
                 System.out.println("Digite seu cargo:");
                 locacao.getFuncionario().setCargo(scanner.next());
+                
                 System.out.println("Digite seu salário:");
                 locacao.getFuncionario().setSalario(scanner.nextFloat());
-
+            // PEDIR ENDERECO PARA O FUNCIONARIO TAMBÉM!
                 break;
 
             case 2 :
-                System.out.println("Cadastro de usuário");
-                System.out.println("Digite seu nome");
+                System.out.println("Cadastro de usuário \n" 
+            + "Digite seu nome");
                 locacao.getUsuario().setNome(scanner.next());
 
                 System.out.println("Digite seu CPF:");
@@ -46,15 +48,17 @@ public class Main {
 
                 System.out.println("Digite sua rua:");
                 locacao.getUsuario().getEndereco().setRua(scanner.next());
+                
                 System.out.println("Digite o número da sua casa:");
                 locacao.getUsuario().getEndereco().setNumero(scanner.nextInt());
+                
                 System.out.println("Digite seu bairro:");
                 locacao.getUsuario().getEndereco().setBairro(scanner.next());
 
                 break;
             case 3 :
-                System.out.println("Cadastro de livro");
-                System.out.println("Digite seu titulo");
+                System.out.println("Cadastro de livro \n" 
+            + "Digite seu titulo");
                 locacao.getLivro().setTitulo(scanner.next());
 
                 System.out.println("Digite o nome do autor:");
@@ -75,30 +79,20 @@ public class Main {
                     opcao = scanner.nextInt();
                     switch (opcao) {
                         case 1:
-                            System.out.println("nome:" + locacao.getFuncionario().getNome());
-
-                            System.out.println("cargo:" + locacao.getFuncionario().getCargo());
-
-                            System.out.println("CPF:" + locacao.getFuncionario().getCpf());
-
-                            System.out.println("Endereço:" + locacao.getFuncionario().getEndereco());
-
-                            System.out.println("salario:" + locacao.getFuncionario().getSalario());
-
+                            System.out.println(":::::::::: FUNCIONÁRIO::::::::::");
+                            System.out.println(locacao.getFuncionario().toString());
+                            break;
+                            
                         case 2:
-                            System.out.println("nome:" + locacao.getUsuario().getNome());
-
-                            System.out.println("código:" + locacao.getUsuario().getCodigo());
-
-                            System.out.println("CPF:" + locacao.getUsuario().getCpf());
-
-                            System.out.println("Endereço:" + locacao.getUsuario().getEndereco());
+                        	System.out.println(":::::::::: USUÁRIO::::::::::");
+                            System.out.println(locacao.getUsuario().toString());
+                            break;
+                            
                         case 3:
-                            System.out.println("Titulo:" + locacao.getLivro().getTitulo());
-
-                            System.out.println("Autor:" + locacao.getLivro().getAutor());
-
-                            System.out.println("Genero:" + locacao.getLivro().getGenero());
+                        	System.out.println(":::::::::: LIVRO::::::::::");
+                            System.out.println(locacao.getLivro().toString());
+                            break;
+                            
                     }
                 }while(opcao != 9);
 
