@@ -22,13 +22,15 @@ public class Main {
                 System.out.println("Cadastro de funcionário\n"
                         +"nome:");
                 locacao.getFuncionario().setNome(scanner.next());
-               // System.out.println("Digite seu CPF:");
-                // locacao.getFuncionario().setCpf(scanner.nextLong());
+                System.out.println("Digite seu CPF:");
+                locacao.getFuncionario().setCpf(scanner.nextLong());
+
 
                 System.out.println("Digite seu cargo:");
                 locacao.getFuncionario().setCargo(scanner.next());
                 System.out.println("Digite seu salário:");
                 locacao.getFuncionario().setSalario(scanner.nextFloat());
+
                 break;
 
             case 2 :

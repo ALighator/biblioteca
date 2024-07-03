@@ -4,6 +4,9 @@ public class Usuario {
     private long cpf;
     private Endereco endereco;
 
+    public Usuario() {
+        this.endereco = new Endereco();
+    }
     public int getCodigo() {
         return codigo;
     }

@@ -9,6 +9,12 @@ public class Locacao {
     private Date dataLocacao;
     private Date dataDevolucao;
     private Livro livroLocado;
+    //PAPEL DO CONSTRUTOR É INICIALIZAR NOSSAS PROPRIEDADES!
+    public Locacao() {
+        this.funcionario = new Funcionario();
+        this.usuario = new Usuario();
+        this.livro = new Livro();
+    }
 
     public double getValorLocacao() {
         return valorLocacao;
